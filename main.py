@@ -36,7 +36,7 @@ def generate_product_description(api_key, product_name, features, audience):
     return description
 
 if __name__ == "__main__":
-    api_key = "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"
+    api_key = "ADICIONAR API AQUI"
     product_name = "Tênis de Corrida"
     features = ["leve", "respirável", "sola antiderrapante", "disponível em várias cores"]
     audience = "corredores de longa distância"
