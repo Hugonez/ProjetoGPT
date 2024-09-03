@@ -1,50 +1,64 @@
 # Gerador de Descrições de Produtos
 
-Este projeto é um gerador de descrições de produtos otimizado para SEO, utilizando a API GPT-3.5 da OpenAI. O objetivo é criar descrições persuasivas e claras para produtos, levando em consideração suas características e o público-alvo.
+Este projeto utiliza a API do OpenAI ChatGPT para gerar descrições de produtos com base em especificações fornecidas. O objetivo é criar descrições atraentes e informativas para novos produtos, como smartphones, destacando suas principais características.
 
-## Requisitos
+## Integrantes do Projeto
 
-- Python 3.x
-- Biblioteca `openai` (você pode instalá-la com `pip install openai`)
+- Hugo Jorge
+- Gustavo Folena Araujo
+- Igor Leonardo
+- Felipe Renan
+- Diana Astro
+- Mateus Viera
+- Pedro Balder
 
-## Instalação
+## Tecnologias Utilizadas
 
-1. Clone este repositório:
+- **Python**: Linguagem de programação para o script.
+- **requests**: Biblioteca para realizar chamadas HTTP.
+- **json**: Biblioteca para manipulação de dados JSON.
+- **OpenAI API**: API para gerar o texto da descrição com o modelo GPT-4.
+
+## Funcionamento
+
+1. **Configuração da API**: O código configura a URL e os cabeçalhos necessários para fazer solicitações à API do OpenAI ChatGPT.
+
+2. **Dados da Solicitação**: Define o modelo a ser usado e a mensagem de entrada para a API, incluindo as instruções para gerar uma descrição atraente de um produto.
+
+3. **Função `gerar_descricao_produto`**:
+   - Informa ao usuário que o processo está em andamento.
+   - Envia uma solicitação POST para a API com os dados configurados.
+   - Verifica se a resposta foi bem-sucedida e, em caso afirmativo, formata e exibe a descrição do produto gerada.
+   - Em caso de erro, exibe o código de status e a mensagem de erro.
+
+4. **Função `formatar_texto`**: Formata o texto gerado para uma largura especificada, facilitando a leitura.
+
+## Como Usar
+
+1. **Instalar Dependências**: Certifique-se de que as bibliotecas necessárias estão instaladas. Você pode instalar o `requests` usando pip:
+
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
-    cd seu-repositorio
+    pip install requests
     ```
 
-2. Instale as dependências necessárias:
-    ```bash
-    pip install openai
-    ```
+2. **Configurar o Código**: Substitua a chave da API (`Bearer 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`) pelo seu token de autenticação da OpenAI.
 
-3. Configure sua chave da API OpenAI. Você pode adicionar sua chave diretamente no código ou configurar uma variável de ambiente.
-
-## Uso
-
-### Exemplo de Uso
-
-1. Abra o arquivo `gerador_descricao.py` e adicione sua chave da API OpenAI na variável `api_key`.
-2. Defina o nome do produto, as características e o público-alvo. 
-3. Execute o script:
+3. **Executar o Script**: Execute o script Python para gerar uma descrição de produto. O script irá imprimir a descrição formatada no console.
 
     ```bash
-    python gerador_descricao.py
+    python nome_do_arquivo.py
     ```
 
-### Parâmetros
+## Exemplo de Uso
 
-- `api_key`: Sua chave da API OpenAI.
-- `product_name`: O nome do produto para o qual deseja gerar uma descrição.
-- `features`: Uma lista de características do produto.
-- `audience`: O público-alvo do produto.
+Suponha que você deseja gerar uma descrição para um novo smartphone. O código está configurado para gerar uma descrição para um smartphone com câmera de 108MP, bateria de longa duração e tela AMOLED de 6,5 polegadas. O resultado será exibido no console.
 
-### Exemplo de Entrada
+## Observações
 
-```python
-api_key = "ADICIONAR API AQUI"
-product_name = "Tênis de Corrida"
-features = ["leve", "respirável", "sola antiderrapante", "disponível em várias cores"]
-audience = "corredores de longa distância"
+- Certifique-se de manter sua chave da API segura e não a compartilhe publicamente.
+- A geração de descrições pode levar alguns segundos, dependendo da carga da API e da complexidade do texto solicitado.
+
+## Contribuições
+
+Se você deseja contribuir para este projeto, por favor, entre em contato com os integrantes listados acima.
+
