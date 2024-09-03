@@ -6,7 +6,7 @@ import time
 url = "https://api.openai.com/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer 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"
+    "Authorization": "Bearer API-KEY" # Insira a API Key aqui
 }
  
 # Dados para a geração de descrição de produtos
